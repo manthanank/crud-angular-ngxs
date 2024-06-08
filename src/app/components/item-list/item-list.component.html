@@ -1,0 +1,10 @@
+<div>
+    <h2>Item List</h2>
+    <ul>
+      <li *ngFor="let item of items$ | async">
+        {{ item.name }} - {{ item.description }}
+        <button (click)="editItem(item)">Edit</button>
+        <button (click)="deleteItem(item.id)">Delete</button>
+      </li>
+    </ul>
+  </div>

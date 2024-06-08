@@ -1,0 +1,11 @@
+<div>
+    <h2>{{ isEditing ? 'Edit' : 'Add' }} Item</h2>
+    <form (ngSubmit)="isEditing ? updateItem() : addItem()">
+      <label>Name:</label>
+      <input [(ngModel)]="item.name" name="name" required />
+      <label>Description:</label>
+      <input [(ngModel)]="item.description" name="description" required />
+      <button type="submit">{{ isEditing ? 'Update' : 'Add' }}</button>
+      <button type="button" (click)="resetForm()">Cancel</button>
+    </form>
+  </div>
