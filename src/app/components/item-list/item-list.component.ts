@@ -13,6 +13,7 @@ import { ItemState } from 'src/app/state/item.state';
 export class ItemListComponent implements OnInit {
 
   @Select(ItemState.getItems) items$!: Observable<Item[]>;
+  loading = false; // Add this line
 
   constructor(private store: Store) { }
 
