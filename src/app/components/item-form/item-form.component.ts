@@ -31,6 +31,7 @@ export class ItemFormComponent implements OnInit {
   }
 
   addItem() {
+    this.item.id = Date.now();
     this.store.dispatch(new AddItem(this.item));
     this.resetForm();
   }
